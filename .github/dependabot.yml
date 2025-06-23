@@ -1,0 +1,17 @@
+# dependabot.yml
+# Version 2 is the latest and correct version for this file schema, 
+# as required by the GitHub documentation.
+version: 2
+updates:
+  # Maintain dependencies for GitHub Actions
+  - package-ecosystem: "github-actions"
+    # Look for workflow files in the root directory (e.g., .github/workflows)
+    directory: "/"
+    schedule:
+      # Check for updates on a daily schedule
+      interval: "daily"
+      # Specify the time of day to check for updates.
+      # This is set to run one hour before the main image build workflow.
+      time: "09:00"
+      # Set the timezone to yours for clarity.
+      timezone: "Asia/Manila"
